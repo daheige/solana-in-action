@@ -32,6 +32,99 @@ To later update the Solana CLI to the latest version, you can use the following 
 agave-install update
 ```
 
+# solana cli basic
+1. Solana Config
+```shell
+solana config get
+```
+You can update the Solana CLI cluster using the following commands:
+```shell
+solana config set --url mainnet-beta
+solana config set --url devnet
+solana config set --url localhost # localhost dev
+solana config set --url testnet
+```
+You can also use the following short options:
+```shell
+solana config set -um    # For mainnet-beta
+solana config set -ud    # For devnet
+solana config set -ul    # For localhost
+solana config set -ut    # For testnet
+```
+2. Create Wallet:
+To interact with the Solana network using the Solana CLI, you need a Solana wallet funded with SOL.
+
+To generate a keypair at the default Keypair Path, run the following command:
+```shell
+solana-keygen new
+```
+Just press enter
+
+```
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none):
+
+Wrote new keypair to $HOME/.config/solana/id.json
+=============================================================================
+pubkey: xxx
+=============================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+purse immense invite echo cement robust grid birth order garage moment behave
+=============================================================================
+```
+Once a keypair is generated, you can get the address (public key) of the keypair with the following command:
+```shell
+solana address
+```
+3. Airdrop SOL
+
+Once you've set up your local wallet, request an airdrop of SOL to fund your wallet. You need SOL to pay for transaction fees and to deploy programs.
+
+Set your cluster to the devnet:
+```shell
+solana config set -ud
+```
+Then request an airdrop of devnet SOL:
+```shell
+solana airdrop 2
+```
+To check your wallet's SOL balance, run the following command:
+```shell
+solana balance
+```
+4. Run Local Validator
+Running a local validator will allow you to deploy and test your programs locally.
+
+In a separate terminal, run the following command to start a local validator:
+```shell
+solana-test-validator
+```
+output:
+```
+Ledger location: test-ledger
+Log: test-ledger/validator.log
+⠁ Initializing...                                                                                                                          Waiting for fees to stabilize 1...
+Identity: xxx
+Genesis Hash: xxx
+Version: 1.18.24
+Shred Version: 49046
+Gossip Address: 127.0.0.1:1024
+TPU Address: 127.0.0.1:1027
+JSON RPC URL: http://127.0.0.1:8899
+WebSocket PubSub URL: ws://127.0.0.1:8900
+⠐ 00:00:41 | Processed Slot: 84 | Confirmed Slot: 84 | Finalized Slot: 52 | Full Snapshot Slot: - | Incremental Snapshot Slot: - | Transactio
+```
+Make sure to update the Solana CLI config to localhost before commands.
+```shell
+solana config set -ul
+```
+
 # solana development
 Solana's development can be divided into two main parts:
 - On-chain program development(链上程序开发）: This is where you create and deploy custom programs directly to the blockchain. Once deployed, they are available to anyone who knows how to communicate with them. You can write these programs in Rust, C, or C++. Rust is currently the most supportive of on-chain application development.
@@ -158,3 +251,4 @@ anchor --version
 - https://www.solana-cn.com/SolanaDocumention/home.html
 - https://www.solana-cn.com/SolanaBasic/000.html
 - https://solana.com/zh/docs/intro/installation
+
