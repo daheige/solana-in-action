@@ -98,6 +98,36 @@ Ok to proceed? (y) y
 This will create a new project with all the necessary files and basic configuration to start building on Solana. The scaffolding will include a sample front end and an on-chain program template if you choose.
 Here I chose React + React Router DOM.
 
+Run the following command to start the application:
+```shell
+npm run dev
+```
+output:
+```
+npm run dev
+
+> @helloworld/source@0.0.0 dev
+> nx serve web
+
+
+> nx run web:serve:development
+
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:3100/, http://[::1]:3100/
+<i> [webpack-dev-server] 404s will fallback to '/index.html'
+
+ NX  Web Development Server is listening at http://localhost:3000/
+
+Entrypoint main [big] 3.3 MiB (4.71 MiB) = runtime.js 50.2 KiB vendor.css 6.18 KiB vendor.js 3.22 MiB main.js 24.3 KiB 4 auxiliary assets
+Entrypoint styles [big] 291 KiB (453 KiB) = runtime.js 50.2 KiB styles.css 304 bytes styles.js 240 KiB 3 auxiliary assets
+chunk (runtime: runtime) main.js (main) 16.7 KiB [initial] [rendered]
+chunk (runtime: runtime) runtime.js (runtime) 33.8 KiB [entry] [rendered]
+chunk (runtime: runtime) styles.css, styles.js (styles) 229 KiB (javascript) 265 bytes (css/mini-extract) [initial] [rendered]
+chunk (runtime: runtime) vendor.css, vendor.js (vendor) (id hint: vendor) 3.15 MiB (javascript) 6.14 KiB (css/mini-extract) [initial] [rendered] split chunk (cache group: vendor) (name: vendor)
+webpack compiled successfully (83a4da51969c0845)
+```
+The running port can be changed, put in the web/project.json file, you can change according to the actual situation.
+
 create-solana-dapp docs:
 - https://github.com/solana-developers/create-solana-dapp?tab=readme-ov-file#create-solana-dapp
 
