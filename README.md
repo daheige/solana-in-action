@@ -30,7 +30,6 @@ solana-cli 1.18.24 (src:6b04e881; feat:3241752014, client:Agave)
 # solana development
 Solana's development can be divided into two main parts:
 - On-chain program development(链上程序开发）: This is where you create and deploy custom programs directly to the blockchain. Once deployed, they are available to anyone who knows how to communicate with them. You can write these programs in Rust, C, or C++. Rust is currently the most supportive of on-chain application development.
-create a framework for client development
 - Client development（客户端开发）: This is the part that writes software (called a decentralized application or dApp) that communicates with on-chain programs. Your application can submit transactions to perform actions on the chain. Client development can be written in any programming language.
 Client development currently supports languages such as Rust, Typescript, Python, Java, C++, GO, Kotlin, Dart, etc. I recommend that you use Rust, GO, and Nodejs for client development, mainly because these three languages are rich in ecology, provide more libraries and tools, and more developers, and the cost of development is relatively low.
 
