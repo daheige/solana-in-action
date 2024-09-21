@@ -1,7 +1,7 @@
 # solana-in-action
 solana in Action
 
-# install
+# Install solana
 - https://solana.com/zh/docs/intro/installation
 1. install rust
 ```shell
@@ -27,6 +27,11 @@ source ~/.bash_profile
 solana --version
 solana-cli 1.18.24 (src:6b04e881; feat:3241752014, client:Agave)
 ```
+To later update the Solana CLI to the latest version, you can use the following command:
+```shell
+agave-install update
+```
+
 # solana development
 Solana's development can be divided into two main parts:
 - On-chain program development(链上程序开发）: This is where you create and deploy custom programs directly to the blockchain. Once deployed, they are available to anyone who knows how to communicate with them. You can write these programs in Rust, C, or C++. Rust is currently the most supportive of on-chain application development.
@@ -131,6 +136,25 @@ The running port can be changed, put in the web/project.json file, you can chang
 create-solana-dapp docs:
 - https://github.com/solana-developers/create-solana-dapp?tab=readme-ov-file#create-solana-dapp
 
+# Install Anchor CLI
+```shell
+cargo install --git https://github.com/coral-xyz/anchor avm --force
+```
+Test to ensure AVM was installed and is accessible:
+```shell
+avm --version
+```
+Install the latest version of Anchor CLI using AVM:
+```shell
+avm install latest
+avm use latest
+```
+To verify that the installation was successful, check the Anchor CLI version:
+```shell
+anchor --version
+```
+
 # docs
 - https://www.solana-cn.com/SolanaDocumention/home.html
 - https://www.solana-cn.com/SolanaBasic/000.html
+- https://solana.com/zh/docs/intro/installation
