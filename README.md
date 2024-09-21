@@ -173,8 +173,9 @@ Solana's development can be divided into two main parts:
 Client development currently supports languages such as Rust, Typescript, Python, Java, C++, GO, Kotlin, Dart, etc. I recommend that you use Rust, GO, and Nodejs for client development, mainly because these three languages are rich in ecology, provide more libraries and tools, and more developers, and the cost of development is relatively low.
 
 How does the client work with the Solana blockchain?
-
+```
     The "glue" between the client side and the onchain side is the Solana JSON RPC API. The client-side sends RPC requests to the Solana network to interact with onchain programs. This is very similar to normal development between a frontend and backend. The major difference with working on Solana is that the backend is a global permissionless blockchain. This means that anyone can interact with your onchain program without the need of issuing API keys or any other form of permission.
+```
 ![](developer_flow.png)
 
 # Developer Environments

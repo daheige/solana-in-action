@@ -1,0 +1,11 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "hello_world" # library name
+crate-type = ["cdylib", "lib"] # dyn lib
+
+[dependencies]
+solana-program = "2.0.10"
